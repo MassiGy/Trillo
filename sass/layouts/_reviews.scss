@@ -1,0 +1,11 @@
+.reviews {
+    position: relative;
+    flex: 1;
+    &__btn {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

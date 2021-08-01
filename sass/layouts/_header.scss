@@ -1,0 +1,11 @@
+.header {
+    height: 7rem;
+    font-size: 1.4rem;
+    background-color: var(--white-color);
+    border-bottom: var(--border-grey-light);
+    @include flexbox-center-y;
+    justify-content: space-between;
+    &__logo {
+        height: 3rem;
+    }
+}

@@ -1,0 +1,43 @@
+.overview {
+    height: 6rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--grey-color-light-2);
+    @include respond(xs) {
+        font-size: 1.5rem;
+    }
+    @include flexbox-center-y;
+    &__star-score {
+        @include flexbox-center-y;
+        @include respond(xs) {
+            margin-left: 1rem !important;
+        }
+    }
+    &__icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--primary-color);
+    }
+    &__link {
+        margin-left: auto;
+        background-color: var(--white-color);
+        color: var(--primary-color);
+        font-size: inherit;
+    }
+    &__rating {
+        height: inherit;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: .7rem 2rem;
+        @include respond(xs) {
+            margin-left: 1rem !important;
+        }
+    }
+    &__mark {
+        margin-bottom: -1rem;
+    }
+    &__title {
+        @include respond(xs) {
+            margin-left: 1rem !important;
+        }
+    }
+}

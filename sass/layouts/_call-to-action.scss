@@ -1,0 +1,18 @@
+.call-to-action {
+    border-top: var(--border-grey-light);
+    text-align: center;
+    background-color: var(--white-color);
+    padding: 3rem;
+    &__btn {
+        margin-top: 2.5rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: var(--white-color);
+        background-image: linear-gradient(to right, var(--primary-color-light), var(--primary-color-dark));
+        background-size: cover;
+        &:hover {
+            background-image: linear-gradient(to right, var(--primary-color-dark), var(--primary-color-light));
+            background-size: cover;
+        }
+    }
+}

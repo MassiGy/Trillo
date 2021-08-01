@@ -1,0 +1,26 @@
+.hotel-view {
+    background-color: var(--white-color);
+    flex: 1;
+    &__details {
+        background-color: var(--grey-color-light-1);
+        display: flex;
+        padding: 3rem;
+        font-size: 1.4rem;
+        border-bottom: 1px solid var(--grey-color-light-1);
+        @include respond(md) {
+            padding: 1.5rem;
+        }
+        @include respond(phones) {
+            padding: 1rem 1rem 5rem 1rem;
+        }
+        @include respond(xs) {
+            padding: 1rem 1rem 5rem 1rem;
+            flex-direction: column;
+            &>* {
+                font-size: 1.8rem;
+                width: 80%;
+                margin: 3rem auto !important;
+            }
+        }
+    }
+}

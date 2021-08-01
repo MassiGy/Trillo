@@ -1,0 +1,41 @@
+.user-nav {
+    @include flexbox-center-y;
+    align-self: stretch;
+    justify-content: space-between;
+    flex: 0 0 20%;
+    &>* {
+        @include flexbox-center-y;
+        height: 100%;
+        padding: 0 1.5rem;
+        position: relative;
+    }
+    &__profile:hover {
+        background-color: var(--grey-color-light-3);
+    }
+    &__picture {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+    }
+    &__icon-box:hover {
+        background-color: var(--grey-color-light-3);
+    }
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--grey-color-dark-2);
+    }
+    &__notification {
+        font-size: .8rem;
+        position: absolute;
+        width: 1.75rem;
+        height: 1.75rem;
+        top: 1.5rem;
+        right: .7rem;
+        z-index: 2;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        color: var(--white-color);
+        @include flexbox-center-xy;
+    }
+}

@@ -1,0 +1,73 @@
+@mixin flexbox-center-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox-center-x {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexbox-center-y {
+    display: flex;
+    align-items: center;
+}
+
+//** media queries
+
+/*
+75em = 1200px
+68.25em = 1100px
+56.25em = 900px
+54em = 864px
+49em = 784px
+35.875=574px
+31.25em = 500px
+26.25em = 420px
+
+*/
+
+//** media queries manager
+@mixin respond($breakpoint) {
+    @if($breakpoint==largest) {
+        @media only screen and (max-width: 75em) {
+            @content;
+        }
+    }
+    @if($breakpoint==lg) {
+        @media only screen and (max-width: 68.25em) {
+            @content;
+        }
+    }
+    @if($breakpoint==md) {
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        }
+    }
+    @if($breakpoint==sm) {
+        @media only screen and (max-width: 54em) {
+            @content;
+        }
+    }
+    @if($breakpoint==big-phones) {
+        @media only screen and (max-width: 49em) {
+            @content;
+        }
+    }
+    @if($breakpoint==phones) {
+        @media only screen and (max-width: 35.875em) {
+            @content;
+        }
+    }
+    @if($breakpoint==xs) {
+        @media only screen and (max-width: 31.25em) {
+            @content;
+        }
+    }
+    @if($breakpoint==smallest) {
+        @media only screen and (max-width: 26.25em) {
+            @content;
+        }
+    }
+}

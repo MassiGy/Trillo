@@ -1,0 +1,50 @@
+.btn {
+    overflow: hidden;
+    cursor: pointer;
+    &-inline {
+        @include flexbox-center-xy;
+        border: none;
+        outline: none;
+        font-size: inherit;
+        background-color: transparent;
+        transition: all .2s;
+        &__text {
+            padding-bottom: 3px;
+            border-bottom: 1px solid currentColor;
+        }
+        &:hover {
+            color: var(--grey-color-dark-1);
+        }
+    }
+    &-rounded {
+        border: none;
+        border-radius: 100px;
+        outline: none;
+    }
+    &-roll {
+        position: relative;
+        &>* {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            transition: all .4s;
+        }
+        &__side--visible {
+            padding: 2rem 7.5rem;
+        }
+        &__side--hidden {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem 0;
+        }
+        &:hover &__side--visible {
+            transform: translateY(100%);
+        }
+        &:hover &__side--hidden {
+            position: absolute;
+            top: 50%;
+        }
+    }
+}

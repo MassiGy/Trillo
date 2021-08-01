@@ -1,0 +1,19 @@
+.list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        width: 50%;
+        @include flexbox-center-y;
+        @include respond(smallest) {
+            width: 100%;
+            @include flexbox-center-x;
+        }
+    }
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--primary-color);
+        padding-right: 1rem;
+    }
+}

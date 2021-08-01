@@ -1,0 +1,17 @@
+.recommendation {
+    font-size: 1.3rem;
+    @include flexbox-center-xy;
+    &__users {
+        margin-left: auto;
+        display: flex;
+    }
+    &__picture {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        border: 3px solid var(--white-color);
+        &:not(:last-child) {
+            margin-right: -2rem;
+        }
+    }
+}
